@@ -22,11 +22,11 @@ def js_changer(addresses, names):
     # Изменяет переменную wallets
     with open(js_path, 'w', encoding="utf-8") as read:
         for line in lines:
-            if line.startswith('	const wallets ='):
+            if "const wallets =" in line:
                 line = f'	const wallets = {addresses};\n'
                 key_edt[0] = True
                 cprint("Адреса успешно добавлены", "green")
-            if line.startswith('	const names =') & len(names) > 0:
+            if ("const names =" in line) & (len(names) > 0):
                 line = f'	const names = {names};\n'
                 key_edt[1] = True
                 cprint("Названия успешно добавлены", "green")

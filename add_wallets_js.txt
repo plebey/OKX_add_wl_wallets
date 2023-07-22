@@ -1,7 +1,7 @@
 (function() {
-	const wallets = ["1"];
+	const wallets = [''];
 	
-	const names = [];
+	const names = [''];
 	
 	const walletSelectors = [];
 	const nameSelectors = [];
